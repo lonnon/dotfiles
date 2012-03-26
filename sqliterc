@@ -1,0 +1,4 @@
+.mode line
+.header on
+.nullvalue NULL
+.separator "|"

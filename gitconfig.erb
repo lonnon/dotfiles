@@ -1,0 +1,24 @@
+[user]
+	name  = <%= print("Your name: "); STDOUT.flush; STDIN.gets.chomp %>
+	email = <%= print("Your email: "); STDOUT.flush; STDIN.gets.chomp %>
+[github]
+	user  = <%= print("Github username: "); STDOUT.flush; STDIN.gets.chomp %>
+	token = <%= print("Github API token: "); STDOUT.flush; STDIN.gets.chomp %>
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[core]
+	pager = less -+S
+	excludesfile = <%= ENV['HOME'] %>/.gitignore
+	editor = vim
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	sb = show-branch
+	l1 = log --pretty=oneline
+	ls = log --stat
+	lg = log --graph

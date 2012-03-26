@@ -1,0 +1,14 @@
+alias       h='history | tail -20'
+alias      ls='ls -hFCG'
+alias      la='ls -A'
+alias      ll='ls -l'
+alias     lla='ls -Al'
+alias      l.='ls -d .*'
+alias    grep='grep -n'
+
+alias   purge='rm *~ .*~ *.*~ \#*'
+alias   rmtmp='rm **/*~'
+alias   start='cmd /C start'
+
+# Hack to edit crontab in-place in vim
+alias crontab='VIM_CRONTAB=true crontab'

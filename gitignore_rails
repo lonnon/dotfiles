@@ -1,0 +1,10 @@
+*~
+log/*
+tmp/*
+.DS_Store
+/#*#
+._*
+Thumbs.db
+*.*swp
+config/database.yml
+config/email.yml
