@@ -93,9 +93,9 @@ prompt_lonnon_setup() {
 
   local -A pc
   pc[default]='default'
-  pc[l]='Black'
-  pc[m]='blue'
-  pc[r]='cyan'
+  pc[l]='default'
+  pc[m]='cyan'
+  pc[r]='blue'
   pc[sep]='blue'
   pc[time]='Cyan'
   pc[user]='Cyan'
