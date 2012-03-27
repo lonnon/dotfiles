@@ -1,8 +1,4 @@
-# Mac at work
-export PATH=/opt/local/bin:/usr/local/bin:/opt/subversion/bin:/Applications/MAMP/Library/bin:/Library/PostgreSQL/9.1/bin:$PATH
-
-# Arch on laptop
-### export PATH=/usr/local/bin:$PATH
+source ~/.zshenv-local
 
 export EDITOR=vim
 export MORE='-s'
