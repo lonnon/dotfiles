@@ -1,46 +1,41 @@
-source ~/.zshalias
-source ~/.zshdirs
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
 
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.history
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="lonnon"
 
-setopt autocd
-setopt extendedglob
-setopt ignoreeof
-setopt interactivecomments
-setopt autopushd
-setopt pushdsilent
-setopt pushdtohome
-setopt nohup
-setopt auto_resume
-setopt nobeep
-setopt csh_null_glob
-setopt promptsubst
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Key bindings.
-# Use vi mode, but modify backspace so it still works in insert mode.
-bindkey -v
-bindkey -M viins '' backward-delete-char
-bindkey -M viins '' backward-delete-char
-bindkey '[1~' beginning-of-line
-bindkey '[4~' end-of-line
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-# Further modify vi mode so Ctrl+P and Ctrl+N move through history.
-bindkey -M viins '' up-history
-bindkey -M viins '' down-history
+# Comment this out to disable weekly auto-update checks
+DISABLE_AUTO_UPDATE="true"
 
-bindkey " " magic-space
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-bindkey -s '^Z' 'fg\n'
-bindkey -s '^W' 'cmd /C start .\n'
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-bindkey "^o" accept-and-infer-next-history
-bindkey "^[#" pound-insert
-bindkey "^[/" which-command
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
 
-autoload -U promptinit
-promptinit
-prompt lonnon
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git vi-mode)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+
+# Override ugly oh-my-zsh directory listings; I like the default colors
+unset LSCOLORS
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
