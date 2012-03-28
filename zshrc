@@ -41,4 +41,7 @@ unset LSCOLORS
 bindkey '^w' open-current-window
 alias o=open-window
 
+# Turn off abysmal command and argument spellchecking
+unsetopt correct_all
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
