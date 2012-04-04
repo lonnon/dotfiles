@@ -35,8 +35,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-# Override ugly oh-my-zsh directory listings; I like the default colors
-unset LSCOLORS
+# Override ugly oh-my-zsh directory listings; I like the default colors.
+# EXCEPT for the background highlighting for directories writable by
+# others, which is not only hard to read in Solarized, but applies to
+# every goddamn directory on a Windows volume mounted under my Arch VM.
+# Totally useless as a security measure. See also http://geoff.greer.fm/lscolors/
+export LSCOLORS="exfxcxdxbxegedabagexex"
+export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=34:ow=34:"
 
 bindkey '^w' open-current-window
 alias o=open-window
