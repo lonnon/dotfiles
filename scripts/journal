@@ -1,0 +1,10 @@
+#!/bin/sh
+notebook=Journal
+title=$1
+if [ -z "$1" ]
+  then
+    title=$(date +'%Y-%m-%dT%H:%M:%S')
+fi
+echo Creating a note named $title in the $notebook notebook
+/usr/bin/env geeknote create --title $title --notebook $notebook --content "test"
+/usr/bin/env geeknote edit --note $title --notebook $notebook --content "WRITE"

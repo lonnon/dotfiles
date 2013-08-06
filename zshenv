@@ -1,4 +1,5 @@
 source ~/.zshenv-local
+export PATH=$HOME/.scripts:$PATH
 
 export EDITOR=vim
 export MORE='-s'
