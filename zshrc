@@ -49,4 +49,9 @@ alias o=open-window
 # Turn off abysmal command and argument spellchecking
 unsetopt correct_all
 
+zsh_aws_completer='/Library/Frameworks/Python.framework/Versions/2.7/bin/aws_zsh_completer.sh'
+if [ -f $zsh_aws_completer ]; then
+  source $zsh_aws_completer
+fi
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
