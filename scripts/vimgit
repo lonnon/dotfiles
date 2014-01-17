@@ -1,0 +1,20 @@
+#!/bin/sh
+# vimgit
+# Open a file and a previous version of that file from a git repository
+# in vimdiff, ready for editing. The older version is in a read-only
+# buffer.
+
+# Usage: vimgit file [ revision ]
+# revision can be any git revision parameter (full SHA1 id, HEAD~3). If
+# omitted, revision defaults to the previous commit (HEAD~1).
+
+if [ "$#" -eq 1 ]; then
+  git show HEAD~1:$1 | vim - -c ":set buftype=nofile" -c ":vnew $1 |windo diffthis" -c ":wincmd h"
+fi
+if [ "$#" -eq 2 ]; then
+  git show $2:$1 | vim - -c ":set buftype=nofile" -c ":vnew $1 |windo diffthis" -c ":wincmd h"
+fi
+if [ "$#" -gt 2 ] || [ "$#" -eq 0 ]; then
+  echo "Usage: $0 FILE [ REVISION ]" >&2
+  exit 1
+fi
