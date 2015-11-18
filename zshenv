@@ -1,4 +1,5 @@
 source ~/.zshenv-local
+source ~/.zshalias
 export PATH=$HOME/.scripts:$PATH
 
 export EDITOR=vim
