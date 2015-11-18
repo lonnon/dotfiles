@@ -1,3 +1,4 @@
 --type-add=ruby=.haml
 --type-set=sass=.scss,.sass
+--type-set=less=.less
 --sort-files
