@@ -187,6 +187,7 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>cd :lcd %:p:h<CR>
 
 " Make a command for turning on soft word wrap with line breaks between words
 command! -nargs=* Wrap set wrap linebreak nolist
