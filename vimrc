@@ -1,4 +1,5 @@
 set nocompatible
+set viminfo=%,'1000,<50,!,/50,:100,n~/.vim/cache/.viminfo
 
 execute pathogen#infect()
 
