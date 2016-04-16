@@ -1,5 +1,6 @@
 set nocompatible
 set viminfo=%,'1000,<50,!,/50,:100,n~/.vim/cache/.viminfo
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 execute pathogen#infect()
 
