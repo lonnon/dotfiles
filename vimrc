@@ -8,12 +8,16 @@ execute pathogen#infect()
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set history=50          " keep 50 lines of command line history
+set history=1000        " keep 50 lines of command line history
 set ruler               " show the cursor position all the time
 set showcmd             " display incomplete commands
 set incsearch           " do incremental searching
 set hidden              " don't freak out over hidden buffers
 set encoding=utf-8 fileencodings=    " force utf-8 for all files
+set autoread
+set sessionoptions-=options
+set ttimeout
+set ttimeoutlen=50
 
 " Behave like vi if invoked via crontab
 if $VIM_CRONTAB == "true"
@@ -176,6 +180,9 @@ nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
 
 " Indent entire buffer
 nmap <leader>= :call Preserve("normal gg=G")<CR>
+
+" Delete comment character when joining commented lines
+set formatoptions+=j
 
 " Toggle paste mode for pasting from terminal without autoindent
 " From http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
