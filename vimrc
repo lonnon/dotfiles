@@ -129,7 +129,7 @@ function! ToggleShowbreak()
   endif
 endfunction
 
-nmap <leader>b :call ToggleShowbreak()<CR>
+nmap <leader>8 :call ToggleShowbreak()<CR>
 
 " Customize tab settings
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
