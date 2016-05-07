@@ -25,9 +25,6 @@ if $VIM_CRONTAB == "true"
   set nowritebackup
 endif
 
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
 " Add shortcut mapping for ESC
 inoremap kj <Esc>
 
@@ -46,9 +43,6 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
-
-" Use Vibrant Ink clone color scheme
-" colorscheme vividchalk
 
 " Use Solarized color schme
 let g:solarized_termcolors=16
