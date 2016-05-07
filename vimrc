@@ -204,9 +204,6 @@ nmap <leader>h :let @/ = ""<CR>:echo 'Highlight cleared'<CR>
 " Shortcut for inserting date stamp
 nmap <leader>d :r ! date +\%F<CR>
 
-" Shorten message displayed by :f and CTRL-G
-" set shm=at
-
 " ToggleComment plugin
 noremap <silent> ,# :call CommentLineToEnd('# ')<CR>+
 noremap <silent> ,3 :call CommentLineToEnd('### ')<CR>+
