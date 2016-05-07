@@ -115,7 +115,7 @@ nmap <silent> <leader>s :set spell!<CR>
 set vb t_vb=
 
 " Toggle display of tabs and newlines
-nmap <leader>	 :set list!<CR>
+nmap <leader><tab> :set list!<CR>
 
 " Set up display of non-printing characters
 set listchars=tab:→·,eol:¶,trail:·
