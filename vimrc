@@ -199,7 +199,7 @@ nmap <leader>w :Wrap<CR>
 set formatprg=par\ rq
 
 " Clear last search and its highlighting
-nmap <leader>h :let @/ = ""<CR>
+nmap <leader>h :let @/ = ""<CR>:echo 'Highlight cleared'<CR>
 
 " Shortcut for inserting date stamp
 nmap <leader>d :r ! date +\%F<CR>
