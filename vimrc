@@ -265,6 +265,7 @@ let g:syntastic_python_flake8_args = '--ignore=E123,E126,E127,E128,W503 --max-li
 map <leader>f :Unite -no-split -buffer-name=files               file<CR>
 map <leader>F :Unite -no-split -buffer-name=files               file_rec/async<CR>
 map <leader>b :Unite -no-split -buffer-name=buffer -quick-match buffer<CR>
+map <leader>B :Unite -no-split -buffer-name=buffer              buffer<CR>
 map <leader>a :Unite -no-split -buffer-name=ack                 grep:.<CR>
 
 let g:unite_source_grep_command = 'ag'
