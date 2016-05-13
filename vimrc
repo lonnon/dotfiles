@@ -45,6 +45,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " Use Solarized color schme
+set t_Co=256
 let g:solarized_termcolors=16
 set background=dark
 colorscheme solarized

@@ -1,3 +1,5 @@
+export TERM='screen-256color'
+
 source ~/.zshenv-local
 source ~/.zshalias
 export PATH=$HOME/.scripts:$PATH

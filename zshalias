@@ -14,3 +14,5 @@ alias   rot13='tr a-zA-Z n-za-mN-ZA-M'
 
 # Hack to edit crontab in-place in vim
 alias crontab='VIM_CRONTAB=true crontab'
+
+alias tmux="tmux -2"
