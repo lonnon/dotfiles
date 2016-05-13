@@ -57,3 +57,13 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+powerline-daemon -q
+case `uname` in
+  Darwin)
+    . /Users/lonnonfoster/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+    ;;
+  Linux)
+    . /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+    ;;
+esac
