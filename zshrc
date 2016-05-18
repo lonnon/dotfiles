@@ -5,7 +5,45 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="lonnon"
+# ZSH_THEME="lonnon"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_HOME_ICON=''
+POWERLEVEL9K_HOME_SUB_ICON=''
+POWERLEVEL9K_FOLDER_ICON=''
+POWERLEVEL9K_VCS_GIT_ICON=''
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n"
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%K{white}%F{black} `date +%T` %f%k%F{white}%f "
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history vi_mode)
+
+POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='white'
+POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND='blue'
+POWERLEVEL9K_VI_MODE_INSERT_BACKGROUND='white'
+POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='black'
+POWERLEVEL9K_VI_INSERT_MODE_STRING='\UE154'
+POWERLEVEL9K_VI_COMMAND_MODE_STRING='\UE1E5'
+
+POWERLEVEL9K_OS_ICON_BACKGROUND='white'
+POWERLEVEL9K_OS_ICON_FOREGROUND='black'
+
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_STRATEGY=''
+POWERLEVEL9K_SHORTEN_DELIMITER='…'
+
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_STATUS_ERROR_BACKGROUND='red'
+POWERLEVEL9K_STATUS_ERROR_FOREGROUND='black'
+POWERLEVEL9K_FAIL_ICON='\UE125'
+
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+
+
+DEFAULT_USER=lonnonfoster
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -57,13 +95,3 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-powerline-daemon -q
-case `uname` in
-  Darwin)
-    . /Users/lonnonfoster/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
-    ;;
-  Linux)
-    . /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
-    ;;
-esac
