@@ -18,7 +18,7 @@ POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\UE1EC ' # 
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n"
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%K{white}%F{black} `date +%T` %f%k%F{white}%f "
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%K{white}%F{black} `date +%T` %f%k%F{white}%f  "
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history vi_mode)
@@ -89,6 +89,9 @@ alias o=open-window
 
 # Turn off abysmal command and argument spellchecking
 unsetopt correct_all
+
+# Remove useless space at end of rprompt
+ZLE_RPROMPT_INDENT=0
 
 zsh_aws_completer='/Library/Frameworks/Python.framework/Versions/2.7/bin/aws_zsh_completer.sh'
 if [ -f $zsh_aws_completer ]; then
