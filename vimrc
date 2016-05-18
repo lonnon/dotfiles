@@ -250,6 +250,10 @@ endfunction
 
 nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
 nmap <silent> <leader>e :call ToggleList("Quickfix List", 'c')<CR>
+nmap ]l :lnext<CR>
+nmap [l :lprevious<CR>
+nmap ]q :cnext<CR>
+nmap [q :cprevious<CR>
 
 " Syntastic
 set statusline+=%#warningmsg#
