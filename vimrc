@@ -267,11 +267,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_flake8_args = '--ignore=E123,E126,E127,E128,W503 --max-line-length 120'
 
 " Unite
-map <leader>f :Unite -no-split -buffer-name=files               file<CR>
-map <leader>F :Unite -no-split -buffer-name=files               file_rec/async<CR>
+map <leader>f :Unite -no-split -buffer-name=files  -prompt=    file<CR>
+map <leader>F :Unite -no-split -buffer-name=files  -prompt=    file_rec/async<CR>
 map <leader>b :Unite -no-split -buffer-name=buffer -quick-match buffer<CR>
-map <leader>B :Unite -no-split -buffer-name=buffer              buffer<CR>
-map <leader>a :Unite -no-split -buffer-name=ack                 grep:.<CR>
+map <leader>B :Unite -no-split -buffer-name=buffer -prompt=    buffer<CR>
+map <leader>a :Unite -no-split -buffer-name=ack    -prompt=    grep:.<CR>
 
 let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts =
