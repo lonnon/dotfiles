@@ -3,9 +3,6 @@ ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# ZSH_THEME="lonnon"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='awesome-patched'
 POWERLEVEL9K_HOME_ICON=''
@@ -49,24 +46,8 @@ POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
 
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
+# Comment this out to disable weekly oh-my-zsh auto-update checks
 DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -74,8 +55,6 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(git vi-mode open-window)
 
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
 
 # Override ugly oh-my-zsh directory listings; I like the default colors.
 # EXCEPT for the background highlighting for directories writable by
@@ -90,9 +69,6 @@ alias o=open-window
 
 # Turn off abysmal command and argument spellchecking
 unsetopt correct_all
-
-# Remove useless space at end of rprompt
-# ZLE_RPROMPT_INDENT=0
 
 zsh_aws_completer='/Library/Frameworks/Python.framework/Versions/2.7/bin/aws_zsh_completer.sh'
 if [ -f $zsh_aws_completer ]; then
