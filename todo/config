@@ -69,6 +69,7 @@ export COLOR_CONTEXT=$BLUE
 
 # === BEHAVIOR ===
 
+export TODOTXT_DEFAULT_ACTION=ls
 ## customize list output
 #
 # TODOTXT_SORT_COMMAND will filter after line numbers are
