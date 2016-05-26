@@ -5,6 +5,7 @@ alias      ll='ls -l'
 alias     lla='ls -Al'
 alias      l.='ls -d .*'
 alias    grep='grep -n'
+alias      to='~/bin/todo.sh'
 
 alias   purge='rm *~ .*~ *.*~ \#*'
 alias   rmtmp='rm **/*~'
