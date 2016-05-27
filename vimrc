@@ -248,12 +248,51 @@ function! ToggleList(bufname, pfx)
   endif
 endfunction
 
+" Make location and quickfix list navigation friendlier
+function! <SID>LocationPrevious()
+  try
+    lprev
+  catch /^Vim\%((\a\+)\)\=:E553/
+    llast
+  endtry
+endfunction
+
+function! <SID>LocationNext()
+  try
+    lnext
+  catch /^Vim\%((\a\+)\)\=:E553/
+    lfirst
+  endtry
+endfunction
+
+nnoremap <silent> <Plug>LocationPrevious :<C-u>exe 'call <SID>LocationPrevious()'<CR>
+nnoremap <silent> <Plug>LocationNext :<C-u>exe 'call <SID>LocationNext()'<CR>
+
+function! <SID>QuickfixPrevious()
+  try
+    cprev
+  catch /^Vim\%((\a\+)\)\=:E553/
+    clast
+  endtry
+endfunction
+
+function! <SID>QuickfixNext()
+  try
+    cnext
+  catch /^Vim\%((\a\+)\)\=:E553/
+    cfirst
+  endtry
+endfunction
+
+nnoremap <silent> <Plug>QuickfixPrevious :<C-u>exe 'call <SID>QuickfixPrevious()'<CR>
+nnoremap <silent> <Plug>QuickfixNext :<C-u>exe 'call <SID>QuickfixNext()'<CR>
+
 nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
 nmap <silent> <leader>e :call ToggleList("Quickfix List", 'c')<CR>
-nmap ]l :lnext<CR>
-nmap [l :lprevious<CR>
-nmap ]q :cnext<CR>
-nmap [q :cprevious<CR>
+nmap <silent> ]l <Plug>LocationNext
+nmap <silent> [l <Plug>LocationPrevious
+nmap <silent> ]q <Plug>QuickfixNext
+nmap <silent> [q <Plug>QuickfixPrevious
 
 " Syntastic
 set statusline+=%#warningmsg#
