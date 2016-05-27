@@ -205,16 +205,6 @@ nmap <leader>h :let @/ = ""<CR>:echo 'Highlight cleared'<CR>
 " Shortcut for inserting date stamp
 nmap <leader>d :r ! date +\%F<CR>
 
-" ToggleComment plugin
-noremap <silent> ,# :call CommentLineToEnd('# ')<CR>+
-noremap <silent> ,3 :call CommentLineToEnd('### ')<CR>+
-noremap <silent> ,/ :call CommentLineToEnd('// ')<CR>+
-noremap <silent> ," :call CommentLineToEnd('" ')<CR>+
-noremap <silent> ,; :call CommentLineToEnd('; ')<CR>+
-noremap <silent> ,- :call CommentLineToEnd('-- ')<CR>+
-noremap <silent> ,* :call CommentLinePincer('/* ', ' */')<CR>+
-noremap <silent> ,< :call CommentLinePincer('<!-- ', ' -->')<CR>+
-
 " Display and toggle YankRing
 let g:yankring_history_file = '.yankring_history'
 map <leader>y :YRShow<CR>
