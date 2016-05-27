@@ -261,10 +261,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_flake8_args = '--ignore=E123,E126,E127,E128,W503 --max-line-length 120'
+let g:syntastic_python_flake8_args = '--ignore=E123,E126,E127,E128 --max-line-length 120'
 
 " Unite
 map <leader>f :Unite -no-split -buffer-name=files  -prompt=    file<CR>
