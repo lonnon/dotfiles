@@ -63,10 +63,10 @@ if has("autocmd")
   filetype plugin indent on
 
   " Tab settings for various languages
-  autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab
-  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType lsl  setlocal ts=4 sts=4 sw=4 expandtab
-  autocmd FileType js   setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType make       setlocal ts=4 sts=4 sw=4 noexpandtab
+  autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType lsl        setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
