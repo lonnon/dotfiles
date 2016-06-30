@@ -4,6 +4,7 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set tags=./TAGS;
 
 execute pathogen#infect()
+execute pathogen#helptags()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
