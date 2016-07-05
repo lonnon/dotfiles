@@ -295,6 +295,12 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_flake8_args = '--ignore=E123,E126,E127,E128 --max-line-length 120'
+let g:syntastic_mode_map = { "mode": "passive" }
+
+" python-mode
+setlocal nonumber
+setlocal define=^\s*\\(def\s\\|class\s\\)
+let g:pymode_options_colorcolumn = 0
 
 " Unite
 map <leader>f :Unite -no-split -buffer-name=files  -prompt=    file_rec/async<CR>
