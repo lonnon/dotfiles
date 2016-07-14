@@ -298,9 +298,16 @@ let g:syntastic_python_flake8_args = '--ignore=E123,E126,E127,E128 --max-line-le
 let g:syntastic_mode_map = { "mode": "passive" }
 
 " python-mode
-setlocal nonumber
+let g:pymode_options = 0
+
+setlocal complete+=t
+setlocal formatoptions-=t
+setlocal nowrap
+setlocal commentstring=#%s
 setlocal define=^\s*\\(def\s\\|class\s\\)
+
 let g:pymode_options_colorcolumn = 0
+let g:pymode_breakpoint_bind = '<leader>t'
 
 " Unite
 map <leader>f :Unite -no-split -buffer-name=files  -prompt=    file_rec/async<CR>
