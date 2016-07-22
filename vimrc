@@ -299,15 +299,16 @@ let g:syntastic_mode_map = { "mode": "passive" }
 
 " python-mode
 let g:pymode_options = 0
-
-setlocal complete+=t
-setlocal formatoptions-=t
-setlocal nowrap
-setlocal commentstring=#%s
-setlocal define=^\s*\\(def\s\\|class\s\\)
-
-let g:pymode_options_colorcolumn = 0
+let g:pymode_options_colorcolumn = 1
 let g:pymode_breakpoint_bind = '<leader>t'
+let g:pymode_lint_ignore = 'E123,E126,E127,E128'
+let g:pymode_lint_options_pep8 = { 'max_line_length': 120 }
+
+autocmd Syntax python setlocal complete+=t
+autocmd Syntax python setlocal formatoptions-=t
+autocmd Syntax python setlocal commentstring=#%s
+autocmd Syntax python setlocal define=^\s*\\(def\s\\|class\s\\)
+autocmd Syntax python normal zR
 
 " Unite
 map <leader>f :Unite -no-split -buffer-name=files  -prompt=    file_rec/async<CR>
