@@ -303,6 +303,7 @@ let g:pymode_options_colorcolumn = 1
 let g:pymode_breakpoint_bind = '<leader>t'
 let g:pymode_lint_ignore = 'E123,E126,E127,E128'
 let g:pymode_lint_options_pep8 = { 'max_line_length': 120 }
+let g:pymode_rope_lookup_project = 0
 
 autocmd Syntax python setlocal complete+=t
 autocmd Syntax python setlocal formatoptions-=t
