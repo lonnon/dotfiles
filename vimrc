@@ -29,6 +29,8 @@ endif
 " Add shortcut mapping for ESC
 inoremap kj <Esc>
 
+set digraph
+
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
@@ -303,6 +305,7 @@ let g:pymode_options = 0
 let g:pymode_options_colorcolumn = 1
 let g:pymode_folding = 0
 let g:pymode_breakpoint_bind = '<leader>t'
+let g:pymode_doc_bind = '<leader>k'
 let g:pymode_lint = 0
 let g:pymode_rope = 0
 let g:pymode_lint_ignore = 'E123,E126,E127,E128'
