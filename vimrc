@@ -313,7 +313,6 @@ autocmd Syntax python setlocal complete+=t
 autocmd Syntax python setlocal formatoptions-=t
 autocmd Syntax python setlocal commentstring=#%s
 autocmd Syntax python setlocal define=^\s*\\(def\s\\|class\s\\)
-autocmd Syntax python normal zR
 
 " Unite
 map <leader>f :Unite -no-split -buffer-name=files  -prompt=    file_rec/async<CR>
