@@ -29,7 +29,8 @@ endif
 " Add shortcut mapping for ESC
 inoremap kj <Esc>
 
-set digraph
+" Remap digraph key to avoid conflict with tmux pane navigation
+inoremap <C-y> <C-k>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
