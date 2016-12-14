@@ -2,6 +2,7 @@ set nocompatible
 set viminfo=%,'1000,<50,!,/50,:100,n~/.vim/cache/.viminfo
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set tags=./TAGS;
+set shell=/bin/sh\ -i
 
 execute pathogen#infect()
 execute pathogen#helptags()
@@ -31,6 +32,15 @@ inoremap kj <Esc>
 
 " Remap digraph key to avoid conflict with tmux pane navigation
 inoremap <C-y> <C-k>
+
+" Faster split navigation
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
