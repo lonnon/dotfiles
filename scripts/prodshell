@@ -1,0 +1,4 @@
+#!/bin/zsh
+tmux select-pane -t:. -P 'bg=colour052'
+openproductionshell
+tmux select-pane -t:. -P 'bg=default'
