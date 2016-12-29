@@ -190,6 +190,9 @@ nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
 " Indent entire buffer
 nmap <leader>= :call Preserve("normal gg=G")<CR>
 
+" Copy range to clipboard (Mac pasteboard). Defaults to entire buffer.
+command! -range=% -nargs=0 Cy <line1>,<line2>w !pbcopy
+
 " Delete comment character when joining commented lines
 set formatoptions+=j
 
