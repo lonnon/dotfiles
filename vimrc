@@ -193,8 +193,8 @@ nmap <leader>= :call Preserve("normal gg=G")<CR>
 " Copy range to clipboard (Mac pasteboard). Defaults to entire buffer.
 command! -range=% -nargs=0 Cy <line1>,<line2>w !pbcopy
 
-" Delete comment character when joining commented lines
-set formatoptions+=j
+" Paragraph and comment formatting options
+set formatoptions+=cjroq
 
 " Toggle paste mode for pasting from terminal without autoindent
 " From http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
