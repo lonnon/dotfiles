@@ -302,26 +302,29 @@ nmap <silent> ]q <Plug>QuickfixNext
 nmap <silent> [q <Plug>QuickfixPrevious
 
 " Syntastic
-let g:syntastic_stl_format = "[%E{ %e}%B{ / }%W{ %w}]"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" let g:syntastic_stl_format = "[%E{ %e}%B{ / }%W{ %w}]"
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_flake8_args = '--ignore=E123,E126,E127,E128,W503 --max-line-length 120'
-let g:syntastic_mode_map = { "mode": "active" }
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_python_flake8_args = '--ignore=E123,E126,E127,E128,W503 --max-line-length 120'
+let g:syntastic_mode_map = { "mode": "passive" }
 
 " python-mode
-let g:pymode_options = 0
-let g:pymode_options_colorcolumn = 1
 let g:pymode_folding = 0
 let g:pymode_breakpoint_bind = '<leader>t'
 let g:pymode_doc_bind = '<leader>k'
-let g:pymode_lint = 0
-let g:pymode_rope = 0
+let g:pymode_options_max_line_length = 120
+let g:pymode_lint = 1
+let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope_goto_definition_bind = '<C-]>'
+let g:pymode_rope_goto_definition_cmd = 'new'
+
 setlocal relativenumber
 setlocal number
 au BufWinEnter * set relativenumber
