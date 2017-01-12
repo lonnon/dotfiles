@@ -322,6 +322,10 @@ let g:pymode_breakpoint_bind = '<leader>t'
 let g:pymode_doc_bind = '<leader>k'
 let g:pymode_lint = 0
 let g:pymode_rope = 0
+setlocal relativenumber
+setlocal number
+au BufWinEnter * set relativenumber
+au BufWinEnter * set number
 
 autocmd Syntax python setlocal complete+=t
 autocmd Syntax python setlocal formatoptions-=t
