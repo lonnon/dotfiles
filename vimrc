@@ -357,3 +357,34 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
+
+" Function to activate a virtualenv in the embedded interpreter for
+" omnicomplete and other things like that.
+" http://stackoverflow.com/questions/3881534/set-python-virtualenv-in-vim
+function LoadVirtualEnv(path)
+    let activate_this = a:path . '/bin/activate_this.py'
+    if getftype(a:path) == "dir" && filereadable(activate_this)
+        python << EOF
+import vim
+activate_this = vim.eval('l:activate_this')
+execfile(activate_this, dict(__file__=activate_this))
+EOF
+    endif
+endfunction
+
+" Load up 'roverweb' virtualenv if one exists in ~/.virtualenv
+let defaultvirtualenv = $HOME . "/.virtualenvs/roverweb"
+
+" Only attempt to load this virtualenv if the defaultvirtualenv
+" actually exists, and we aren't running with a virtualenv active.
+if has("python")
+    if empty($VIRTUAL_ENV) && getftype(defaultvirtualenv) == "dir"
+        call LoadVirtualEnv(defaultvirtualenv)
+    endif
+endif
+
+" Improve omnicomplete behavior
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
