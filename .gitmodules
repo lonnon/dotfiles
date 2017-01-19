@@ -34,3 +34,12 @@
 [submodule "vim/bundle/vim-tmux-navigator"]
 	path = vim/bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/bundle/vim-speeddating"]
+	path = vim/bundle/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+[submodule "vim/bundle/vim-repeat"]
+	path = vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/bundle/vim-abolish"]
+	path = vim/bundle/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
