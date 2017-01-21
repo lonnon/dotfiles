@@ -320,10 +320,11 @@ let g:pymode_breakpoint_bind = '<leader>t'
 let g:pymode_doc_bind = '<leader>k'
 let g:pymode_options_max_line_length = 120
 let g:pymode_lint = 1
+let g:pymode_lint_ignore = 'E123,E126,E127,E128'
 let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_goto_definition_bind = '<C-]>'
-let g:pymode_rope_goto_definition_cmd = 'new'
+let g:pymode_rope_goto_definition_cmd = 'e'
 let g:pymode_virtualenv_path = '/Users/lonnonfoster/.virtualenvs/roverweb'
 
 setlocal relativenumber
