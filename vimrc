@@ -81,6 +81,7 @@ if has("autocmd")
   autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType lsl        setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType json       setlocal ts=4 sts=4 sw=4 expandtab
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -88,6 +89,7 @@ if has("autocmd")
 
     " For all text files set 'textwidth' to 78 characters.
     autocmd FileType text setlocal textwidth=78
+    autocmd FileType rst  setlocal textwidth=78
 
     " When editing a file, always jump to the last known cursor position.
     " Don't do it when the position is invalid or when inside an event handler
@@ -320,7 +322,7 @@ let g:pymode_breakpoint_bind = '<leader>t'
 let g:pymode_doc_bind = '<leader>k'
 let g:pymode_options_max_line_length = 120
 let g:pymode_lint = 1
-let g:pymode_lint_ignore = 'E123,E126,E127,E128'
+let g:pymode_lint_ignore = 'E123,E126,E127,E128,W503'
 let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_goto_definition_bind = '<C-]>'
