@@ -82,6 +82,7 @@ if has("autocmd")
   autocmd FileType lsl        setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType json       setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType html       setlocal ts=4 sts=4 sw=4 expandtab
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
