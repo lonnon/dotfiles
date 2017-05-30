@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DOCKERCMD="docker-compose run --rm -e SQLITE=1 web ./manage.py nose"
+
+if [ "$1" != "" ]; then
+  ${DOCKERCMD} $1
+else
+  ${DOCKERCMD}
+fi
