@@ -305,32 +305,23 @@ nmap <silent> [l <Plug>LocationPrevious
 nmap <silent> ]q <Plug>QuickfixNext
 nmap <silent> [q <Plug>QuickfixPrevious
 
-" Syntastic
-" let g:syntastic_stl_format = "[%E{ %e}%B{ / }%W{ %w}]"
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 0
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_python_flake8_args = '--ignore=E123,E126,E127,E128,W503 --max-line-length 120'
-let g:syntastic_mode_map = { "mode": "passive" }
-
 " python-mode
-let g:pymode_folding = 0
+let g:pymode_folding = 1
 let g:pymode_breakpoint_bind = '<leader>t'
 let g:pymode_doc_bind = '<leader>k'
 let g:pymode_options_max_line_length = 120
-let g:pymode_lint = 1
-let g:pymode_lint_ignore = 'E123,E126,E127,E128,W503'
-let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
+let g:pymode_lint = 0
 let g:pymode_rope_regenerate_on_write = 0
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_goto_definition_bind = '<C-]>'
 let g:pymode_rope_goto_definition_cmd = 'e'
 let g:pymode_virtualenv_path = '/Users/lonnonfoster/.virtualenvs/roverweb'
+
+" Remove underlining from folds so it doesn't obscure linting signs
+hi Folded term=NONE cterm=NONE gui=NONE
+
+" ALE
+let g:ale_python_flake8_options = '--ignore=E123,E126,E127,E128,W503 --max-line-length 120'
 
 setlocal relativenumber
 setlocal number
@@ -359,7 +350,7 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 " airline
 let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#wordcount#enabled = 1
 
 if !exists('g:airline_symbols')
@@ -371,6 +362,8 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
+let g:airline#extensions#ale#error_symbol = ' '
+let g:airline#extensions#ale#warning_symbol = ' '
 
 " Improve omnicomplete behavior
 set completeopt=longest,menuone
