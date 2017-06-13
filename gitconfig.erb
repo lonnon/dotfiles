@@ -1,9 +1,8 @@
 [user]
-	name  = <%= print("Your name: "); STDOUT.flush; STDIN.gets.chomp %>
-	email = <%= print("Your email: "); STDOUT.flush; STDIN.gets.chomp %>
+	name  = Lonnon Foster
+	email = lonnon.foster@gmail.com
 [github]
-	user  = <%= print("Github username: "); STDOUT.flush; STDIN.gets.chomp %>
-	token = <%= print("Github API token: "); STDOUT.flush; STDIN.gets.chomp %>
+	user  = lonnon
 [color]
 	ui = auto
 	diff = auto
@@ -12,7 +11,7 @@
 	interactive = auto
 [core]
 	pager = less -+S
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
+	excludesfile = /Users/lonnonfoster/.gitignore
 	editor = vim
 [alias]
 	st = status
@@ -22,3 +21,13 @@
 	l1 = log --pretty=oneline
 	ls = log --stat
 	lg = log --graph
+  d  = diff
+  dt = difftool
+[push]
+	default = simple
+[diff]
+  tool = vimdiff
+[merge]
+	tool = bc3
+[mergetool]
+	bc3 = trustExitCode
