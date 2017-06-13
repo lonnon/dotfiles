@@ -318,15 +318,15 @@ let g:pymode_rope_goto_definition_cmd = 'e'
 let g:pymode_virtualenv_path = '/Users/lonnonfoster/.virtualenvs/roverweb'
 
 " Remove underlining from folds so it doesn't obscure linting signs
-hi Folded term=NONE cterm=NONE gui=NONE
+highlight Folded term=NONE cterm=NONE gui=NONE
 
 " ALE
 let g:ale_python_flake8_options = '--ignore=E123,E126,E127,E128,W503 --max-line-length 120'
 
 setlocal relativenumber
 setlocal number
-au BufWinEnter * set relativenumber
-au BufWinEnter * set number
+autocmd BufWinEnter * set relativenumber
+autocmd BufWinEnter * set number
 
 autocmd Syntax python setlocal complete+=t
 autocmd Syntax python setlocal formatoptions-=t
