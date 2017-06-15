@@ -18,3 +18,5 @@ alias crontab='VIM_CRONTAB=true crontab'
 
 alias tmux="tmux -2"
 alias ipy="python -c 'from IPython import embed; embed()'"
+alias ,ew="vim"
+alias ,a='ag'
