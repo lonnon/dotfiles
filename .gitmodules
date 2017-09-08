@@ -55,3 +55,6 @@
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
 	url = git://github.com/w0rp/ale
+[submodule "vim/bundle/tasklist.vim"]
+	path = vim/bundle/tasklist.vim
+	url = https://github.com/vim-scripts/TaskList.vim
