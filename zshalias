@@ -4,7 +4,7 @@ alias      la='ls -A'
 alias      ll='ls -l'
 alias     lla='ls -Al'
 alias      l.='ls -d .*'
-alias    grep='grep -n'
+alias    grep='grep -n --color=auto'
 alias      to='~/.scripts/todo.sh'
 
 alias   purge='rm *~ .*~ *.*~ \#*'
