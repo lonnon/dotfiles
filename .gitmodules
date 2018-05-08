@@ -58,3 +58,6 @@
 [submodule "vim/bundle/tasklist.vim"]
 	path = vim/bundle/tasklist.vim
 	url = https://github.com/vim-scripts/TaskList.vim
+[submodule "vim/bundle/fastfold"]
+	path = vim/bundle/fastfold
+	url = https://github.com/Konfekt/FastFold
