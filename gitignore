@@ -9,3 +9,5 @@ Thumbs.db
 .swo
 .ropeproject
 .swn
+.docker-sync
+Session.vim
