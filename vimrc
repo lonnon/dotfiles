@@ -83,6 +83,7 @@ if has("autocmd")
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType json       setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType html       setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -319,6 +320,9 @@ let g:pymode_virtualenv_path = '/Users/lonnonfoster/.virtualenvs/roverweb'
 
 " Remove underlining from folds so it doesn't obscure linting signs
 highlight Folded term=NONE cterm=NONE gui=NONE
+
+" Don't recalculate folds in insert mode
+set foldmethod=manual
 
 " ALE
 let g:ale_python_flake8_options = '--ignore=E123,E126,E127,E128,W503 --max-line-length 120'
