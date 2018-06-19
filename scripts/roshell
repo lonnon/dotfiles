@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+tmux select-pane -t:. -P 'bg=colour237'
+m shell_plus
+tmux select-pane -t:. -P 'bg=default'
