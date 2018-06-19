@@ -80,7 +80,7 @@ if has("autocmd")
   autocmd FileType make       setlocal ts=4 sts=4 sw=4 noexpandtab
   autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType lsl        setlocal ts=4 sts=4 sw=4 expandtab
-  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType json       setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType html       setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
@@ -307,7 +307,7 @@ nmap <silent> ]q <Plug>QuickfixNext
 nmap <silent> [q <Plug>QuickfixPrevious
 
 " python-mode
-let g:pymode_folding = 1
+let g:pymode_folding = 0
 let g:pymode_breakpoint_bind = '<leader>t'
 let g:pymode_doc_bind = '<leader>k'
 let g:pymode_options_max_line_length = 120
