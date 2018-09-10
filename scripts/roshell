@@ -1,5 +1,5 @@
 #!/bin/zsh
 
 tmux select-pane -t:. -P 'bg=colour237'
-m shell_plus
+m shell_plus --use-production-replica
 tmux select-pane -t:. -P 'bg=default'
