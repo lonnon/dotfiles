@@ -58,6 +58,6 @@
 [submodule "vim/bundle/fastfold"]
 	path = vim/bundle/fastfold
 	url = https://github.com/Konfekt/FastFold
-[submodule "vim/bundle/vim-vue"]
-	path = vim/bundle/vim-vue
-	url = https://github.com/posva/vim-vue.git
+[submodule "vim/bundle/vim-pug"]
+	path = vim/bundle/vim-pug
+	url = https://github.com/digitaltoad/vim-pug.git
