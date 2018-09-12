@@ -7,5 +7,5 @@ if [[ $# -eq 0 ]]
 fi
 
 tmux select-pane -t:. -P 'bg=colour052'
-ssh -t $ROVER_PROD_ADDRESS -- sudo su - $ROVER_PROD_USER -c "bash -l -c \"${ROVER_PROD_BASE_PATH}${ROVER_PROD_PYTHON_PATH}/python ${ROVER_PROD_BASE_PATH}${ROVER_PROD_MANAGE_PATH}/manage.py shell_plus --writeable-access-email=${ROVER_PROD_BLAME_EMAIL} --writeable-access-reason=$1\""
+ssh -t $ROVER_PROD_ADDRESS -- sudo su - $ROVER_PROD_USER -c "bash -l -c \"${ROVER_PROD_BASE_PATH}${ROVER_PROD_PYTHON_PATH}/python ${ROVER_PROD_BASE_PATH}${ROVER_PROD_MANAGE_PATH}/manage.py shell_plus --writeable-access-email=${ROVER_PROD_BLAME_EMAIL} --writeable-access-reason='$1'\""
 tmux select-pane -t:. -P 'bg=default'
