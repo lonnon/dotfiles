@@ -1,0 +1,19 @@
+rm -rf /Users/lonnonfoster/Library/Application\ Support/Firefox
+rm -rf /Users/lonnonfoster/Library/Application\ Support/Google
+rm -rf /Users/lonnonfoster/Library/Application\ Support/Many Tricks
+rm -rf /Users/lonnonfoster/Library/Caches/Firefox
+rm -rf /Users/lonnonfoster/Library/Caches/Google
+rm -rf /Users/lonnonfoster/Library/Caches/com.manytricks.Moom
+rm -rf /Users/lonnonfoster/Library/Cookies/com.manytricks.Moom.binarycookies
+rm -rf /Users/lonnonfoster/Library/Google
+rm -rf /Users/lonnonfoster/Library/Preferences/com.manytricks.Moom.plist
+rm -rf /Users/lonnonfoster/.ssh
+rm -rf /Users/lonnonfoster/.config
+rm -rf /Users/lonnonfoster/.lesshst
+rm -rf /Users/lonnonfoster/.oh-my-zsh
+rm -rf /Users/lonnonfoster/.yankring_history_v2.txt
+rm -rf /Users/lonnonfoster/dotfiles
+rm -rf /Users/lonnonfoster/.zlogin
+rm -rf /Users/lonnonfoster/.zsh_history
+rm -rf /Users/lonnonfoster/.zshenv-local
+rm -rf /Users/lonnonfoster/.zshrc
