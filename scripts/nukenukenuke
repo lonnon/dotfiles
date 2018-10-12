@@ -1,3 +1,16 @@
+rm -rf /Users/lonnonfoster/.bash_history
+rm -rf /Users/lonnonfoster/.boto
+rm -rf /Users/lonnonfoster/.bundle
+rm -rf /Users/lonnonfoster/.cache
+rm -rf /Users/lonnonfoster/.config
+rm -rf /Users/lonnonfoster/.lesshst
+rm -rf /Users/lonnonfoster/.oh-my-zsh
+rm -rf /Users/lonnonfoster/.ssh
+rm -rf /Users/lonnonfoster/.yankring_history_v2.txt
+rm -rf /Users/lonnonfoster/.zlogin
+rm -rf /Users/lonnonfoster/.zsh_history
+rm -rf /Users/lonnonfoster/.zshenv-local
+rm -rf /Users/lonnonfoster/.zshrc
 rm -rf /Users/lonnonfoster/Library/Application\ Support/Firefox
 rm -rf /Users/lonnonfoster/Library/Application\ Support/Google
 rm -rf /Users/lonnonfoster/Library/Application\ Support/Many Tricks
@@ -7,13 +20,26 @@ rm -rf /Users/lonnonfoster/Library/Caches/com.manytricks.Moom
 rm -rf /Users/lonnonfoster/Library/Cookies/com.manytricks.Moom.binarycookies
 rm -rf /Users/lonnonfoster/Library/Google
 rm -rf /Users/lonnonfoster/Library/Preferences/com.manytricks.Moom.plist
-rm -rf /Users/lonnonfoster/.ssh
-rm -rf /Users/lonnonfoster/.config
-rm -rf /Users/lonnonfoster/.lesshst
-rm -rf /Users/lonnonfoster/.oh-my-zsh
-rm -rf /Users/lonnonfoster/.yankring_history_v2.txt
 rm -rf /Users/lonnonfoster/dotfiles
-rm -rf /Users/lonnonfoster/.zlogin
-rm -rf /Users/lonnonfoster/.zsh_history
-rm -rf /Users/lonnonfoster/.zshenv-local
-rm -rf /Users/lonnonfoster/.zshrc
+
+rm -rf /Users/lonnonfoster/.gemrc
+rm -rf /Users/lonnonfoster/.vim
+rm -rf /Users/lonnonfoster/.gitignore_rails
+rm -rf /Users/lonnonfoster/.tmux.conf
+rm -rf /Users/lonnonfoster/.todo.action.d
+rm -rf /Users/lonnonfoster/.irbrc
+rm -rf /Users/lonnonfoster/.ackrc
+rm -rf /Users/lonnonfoster/.scripts
+rm -rf /Users/lonnonfoster/.tmuxline
+rm -rf /Users/lonnonfoster/.gitignore
+rm -rf /Users/lonnonfoster/.zshenv
+rm -rf /Users/lonnonfoster/.vimrc
+rm -rf /Users/lonnonfoster/.zshalias
+rm -rf /Users/lonnonfoster/.screenrc
+rm -rf /Users/lonnonfoster/.sqliterc
+rm -rf /Users/lonnonfoster/.asciiart
+rm -rf /Users/lonnonfoster/.bash_profile
+rm -rf /Users/lonnonfoster/.aspell.en.pws
+rm -rf /Users/lonnonfoster/.inputrc
+rm -rf /Users/lonnonfoster/.todo
+rm -rf /Users/lonnonfoster/.zsh
