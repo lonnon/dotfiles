@@ -24,7 +24,7 @@
 	url = https://github.com/tpope/vim-obsession.git
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
-	url = https://github.com/klen/python-mode.git
+	url = https://github.com/lonnon/python-mode.git
 [submodule "vim/bundle/vim-tmux-navigator"]
 	path = vim/bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
