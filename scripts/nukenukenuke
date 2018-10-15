@@ -1,4 +1,5 @@
 rm -rf /Users/lonnonfoster/.bash_history
+rm -rf /Users/lonnonfoster/.bash_sessions
 rm -rf /Users/lonnonfoster/.boto
 rm -rf /Users/lonnonfoster/.bundle
 rm -rf /Users/lonnonfoster/.cache
