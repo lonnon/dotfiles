@@ -312,6 +312,7 @@ let g:pymode_breakpoint_bind = '<leader>t'
 let g:pymode_doc_bind = '<leader>k'
 let g:pymode_options_max_line_length = 120
 let g:pymode_lint = 0
+let g:pymode_rope = 1
 let g:pymode_rope_regenerate_on_write = 0
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_goto_definition_bind = '<C-]>'
