@@ -11,3 +11,4 @@ Thumbs.db
 .swn
 .docker-sync
 Session.vim
+__pycache__
