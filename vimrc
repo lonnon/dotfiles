@@ -327,6 +327,8 @@ set foldmethod=manual
 
 " ALE
 let g:ale_python_flake8_options = '--ignore=E123,E126,E127,E128,W503 --max-line-length 120'
+let g:ale_fixers = {'python': ['isort']}
+let g:ale_fix_on_save = 1
 
 setlocal relativenumber
 setlocal number
