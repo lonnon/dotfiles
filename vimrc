@@ -341,11 +341,11 @@ autocmd Syntax python setlocal commentstring=#%s
 autocmd Syntax python setlocal define=^\s*\\(def\s\\|class\s\\)
 
 " Unite
-map <leader>f :Unite -no-split -buffer-name=files  -prompt=    file_rec/async<CR>
-map <leader>F :Unite -no-split -buffer-name=files  -prompt=    file<CR>
+map <leader>f :Unite -no-split -buffer-name=files  -prompt= file_rec/async<CR>
+map <leader>F :Unite -no-split -buffer-name=files  -prompt= file<CR>
 map <leader>b :Unite -no-split -buffer-name=buffer -quick-match buffer<CR>
-map <leader>B :Unite -no-split -buffer-name=buffer -prompt=    buffer<CR>
-map <leader>a :Unite -no-split -buffer-name=ack    -prompt=    grep:.<CR>
+map <leader>B :Unite -no-split -buffer-name=buffer -prompt= buffer<CR>
+map <leader>a :Unite -no-split -buffer-name=ack    -prompt= grep:.<CR>
 
 let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts =
@@ -367,10 +367,10 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline#extensions#ale#error_symbol = ' '
-let g:airline#extensions#ale#warning_symbol = ' '
+let g:airline_symbols.branch = 'שׂ'
+let g:airline_symbols.readonly = ''
+let g:airline#extensions#ale#error_symbol = ' '
+let g:airline#extensions#ale#warning_symbol = ' '
 
 " Improve omnicomplete behavior
 set completeopt=longest,menuone
