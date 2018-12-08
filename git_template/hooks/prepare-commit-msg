@@ -1,0 +1,15 @@
+#!/bin/bash
+
+branch=`git rev-parse --abbrev-ref HEAD`
+msg=`cat $1`
+
+if [ "$branch" == "HEAD" ]
+then
+    exit
+fi
+
+if ! [[ "$msg" =~ ^\[$branch\] ]]
+then
+    echo -n "[$branch] $msg" > $1
+fi
+
