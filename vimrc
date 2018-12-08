@@ -317,7 +317,9 @@ let g:pymode_rope_regenerate_on_write = 0
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_goto_definition_bind = '<C-]>'
 let g:pymode_rope_goto_definition_cmd = 'e'
-let g:pymode_virtualenv_path = '/Users/lonnonfoster/.virtualenvs/roverweb'
+if filereadable('/Users/lonnonfoster/.virtualenvs/roverweb')
+  let g:pymode_virtualenv_path = '/Users/lonnonfoster/.virtualenvs/roverweb'
+endif
 
 " Remove underlining from folds so it doesn't obscure linting signs
 highlight Folded term=NONE cterm=NONE gui=NONE
