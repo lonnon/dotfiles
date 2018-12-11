@@ -1,6 +1,5 @@
 --exclude=node_modules
 --exclude=gulp
---exclude=fixtures
 
 --languages=-javascript
 
