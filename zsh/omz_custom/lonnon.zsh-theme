@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 ZSH_THEME_BARE_GIT_PROMPT_SHA_BEFORE=" ("
 ZSH_THEME_BARE_GIT_PROMPT_SHA_AFTER=":"
 
@@ -63,6 +65,7 @@ PROMPT+='$(git_prompt_info)'
 PROMPT+='%{$reset_color%}'
 PROMPT+='
 '
-PROMPT+='%{$fg[cyan]%}%#%{$reset_color%} '
+# PROMPT+='%{$fg[cyan]%}%#%{$reset_color%} '
+PROMPT+='%{$fg[cyan]%}ﰌ%{$reset_color%} '
 
 RPROMPT='$(vi_mode_prompt_info) !%{$fg[cyan]%}%!%{$reset_color%}'
