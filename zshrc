@@ -29,3 +29,5 @@ zsh_aws_completer='/Library/Frameworks/Python.framework/Versions/2.7/bin/aws_zsh
 if [ -f $zsh_aws_completer ]; then
   source $zsh_aws_completer
 fi
+
+eval $(thefuck --alias)
