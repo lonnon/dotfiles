@@ -4,7 +4,7 @@ set -e
 PATH="/usr/local/bin:$PATH"
 dir=$(git rev-parse --git-dir)
 trap 'rm -f "$dir/$$.tags"' EXIT
-if [[ ! -f $dir/.ctags ]]; then
+if ! [ -f $dir/.ctags ]; then
   touch "$dir/.ctags"
 fi
 ctags --recurse --options="$dir/.ctags" --exclude="$dir/../.gitignore" --tag-relative -f"$dir/$$.tags" "$dir/.."
