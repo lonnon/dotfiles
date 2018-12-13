@@ -75,15 +75,6 @@ if has("autocmd")
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
 
-  " Tab settings for various languages
-  autocmd FileType make       setlocal ts=4 sts=4 sw=4 noexpandtab
-  autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType lsl        setlocal ts=4 sts=4 sw=4 expandtab
-  autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType json       setlocal ts=4 sts=4 sw=4 expandtab
-  autocmd FileType html       setlocal ts=4 sts=4 sw=4 expandtab
-  autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
-
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
     au!
@@ -93,21 +84,27 @@ if has("autocmd")
     autocmd FileType rst       setlocal textwidth=78
     autocmd FileType markdown  setlocal textwidth=78
 
+    " Tab settings for various languages
+    autocmd FileType make       setlocal ts=4 sts=4 sw=4 noexpandtab
+    autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType lsl        setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType json       setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType html       setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
+
     " When editing a file, always jump to the last known cursor position.
     " Don't do it when the position is invalid or when inside an event handler
     " (happens when dropping a file on gvim).  Also don't do it when the mark
     " is in the first line, that is the default position when opening a file.
     autocmd BufReadPost *
-          \ if line("'\"") > 1 && line("'\"") <= line("$") |
-          \   exe "normal! g`\"" |
-          \ endif
+      \ if line("'\"") > 1 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
 
   augroup END
-
 else
-
   set autoindent                " always set autoindenting on
-
 endif " has("autocmd")
 
 " Convenient command to see the difference between the current buffer and the
