@@ -64,3 +64,6 @@
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/pack/themes/opt/solarized8"]
+	path = vim/pack/themes/opt/solarized8
+	url = git@github.com:lifepillar/vim-solarized8.git
