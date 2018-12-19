@@ -14,7 +14,7 @@ zsh_aws_completer  `pip3 install awscli --upgrade --user`
 Machine identification for prompt:
 
 Rover:
-lonnonfoster@Rover-LonnonFoster-2
+lonnonfoster@Rover-LonnonFoster-2.local
 
 Laptop:
 lonnon@Raphael
@@ -25,6 +25,7 @@ lonnon@Gabriel
 
 ### Mac OS X
 
+iTerm2
 Karabiner
 Moom
 NoSleep
