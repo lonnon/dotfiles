@@ -21,3 +21,11 @@ lonnon@Raphael
 
 Desktop:
 lonnon@Gabriel
+
+
+### Mac OS X
+
+Karabiner
+Moom
+NoSleep
+
