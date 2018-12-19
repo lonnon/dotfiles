@@ -9,6 +9,7 @@ export MORE="-s"
 export PAGER="less"
 export MANPAGER="$PAGER"
 export VISUAL="$EDITOR"
+export HOST="$HOST"
 
 # Declare UTF-8 locale for Ruby 1.9
 export LC_ALL="en_US.UTF-8"

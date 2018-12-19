@@ -57,11 +57,18 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
-" Use Solarized color schme
-set t_Co=256
-let g:solarized_termcolors=16
-set background=dark
-colorscheme solarized
+if $HOST == 'Rover-LonnonFoster-2.local'
+  " Use Solarized color schme (iTerm2)
+  set t_Co=256
+  let g:solarized_termcolors=16
+  set background=dark
+  colorscheme solarized
+else
+  " Use Solarized8 color scheme (Terminus)
+  set termguicolors
+  set background=dark
+  colorscheme solarized8
+endif
 
 " Highlight current line
 set cursorline
