@@ -58,7 +58,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 let hostname = substitute(system('hostname'), '\n', '', '')
-if hostname == 'Rover-LonnonFoster-2.local'
+if hostname == 'Rover-LonnonFoster-2.local' || hostname == 'Rover-LonnonFoster.local'
   " Use Solarized color schme (iTerm2)
   set t_Co=256
   let g:solarized_termcolors=16
