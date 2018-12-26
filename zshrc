@@ -1,14 +1,23 @@
-# Path to your oh-my-zsh configuration.
-ZSH="$HOME/.oh-my-zsh"
-ZSH_CUSTOM="$HOME/.zsh/omz_custom"
-ZSH_THEME="lonnon"
+autoload -U replace-string
+zle -N replace-regex replace-string
+bindkey -a 'q' replace-regex
 
-DISABLE_AUTO_UPDATE="false"
-DISABLE_AUTO_TITLE="true"
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  # Path to your oh-my-zsh configuration.
+  ZSH="$HOME/.oh-my-zsh"
+  ZSH_CUSTOM="$HOME/.zsh/omz_custom"
+  ZSH_THEME="lonnon"
 
-plugins=(vi-mode open-window)
+  DISABLE_AUTO_UPDATE="false"
+  DISABLE_AUTO_TITLE="true"
 
-source "$ZSH/oh-my-zsh.sh"
+  plugins=(vi-mode open-window)
+
+  source "$ZSH/oh-my-zsh.sh"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  autoload -U promptinit; promptinit
+  prompt pure
+fi
 
 # Override ugly oh-my-zsh directory listings; I like the default colors.
 # EXCEPT for the background highlighting for directories writable by
