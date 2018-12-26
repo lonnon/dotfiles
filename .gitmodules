@@ -67,3 +67,6 @@
 [submodule "vim/pack/themes/opt/solarized8"]
 	path = vim/pack/themes/opt/solarized8
 	url = git@github.com:lifepillar/vim-solarized8.git
+[submodule "zsh/pure"]
+	path = zsh/pure
+	url = git@github.com:sindresorhus/pure.git
