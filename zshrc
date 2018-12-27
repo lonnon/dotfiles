@@ -2,6 +2,9 @@ autoload -U replace-string
 zle -N replace-regex replace-string
 bindkey -a 'q' replace-regex
 
+bindkey -v '^p' up-line-or-search
+bindkey -v '^n' down-line-or-search
+
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Path to your oh-my-zsh configuration.
   ZSH="$HOME/.oh-my-zsh"
