@@ -3,8 +3,8 @@ import re
 
 def match(command):
     return (
-        'gi: command not found' in command.output
-        and re.match('gi t', command.script)
+        'command not found: gi' in command.output
+        and re.match('gi t(.+)', command.script)
     )
 
 
