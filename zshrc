@@ -5,7 +5,7 @@ bindkey -a 'q' replace-regex
 bindkey -v '^p' up-line-or-search
 bindkey -v '^n' down-line-or-search
 
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ "$OSTYPE" == "whatever" ]]; then
   # Path to your oh-my-zsh configuration.
   ZSH="$HOME/.oh-my-zsh"
   ZSH_CUSTOM="$HOME/.zsh/omz_custom"
@@ -17,7 +17,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   plugins=(vi-mode open-window)
 
   source "$ZSH/oh-my-zsh.sh"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+elif [[ "$OSTYPE" == "linux-gnu" || "$OSTYPE" == "darwin"* ]]; then
   autoload -U promptinit; promptinit
   prompt pure
 fi
