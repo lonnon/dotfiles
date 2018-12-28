@@ -1,0 +1,6 @@
+# Nyerm
+Host nyerm
+    HostName nyerm.com
+    User lonnon
+    ServerAliveInterval 60
+    ServerAliveCountMax 2
