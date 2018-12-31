@@ -16,8 +16,9 @@ for config_file ($ZSH_LIB/*.zsh); do
   source $config_file
 done
 
-bindkey "^w" open-current-window
-alias o="open-window"
+# TODO: make this a widget again
+# bindkey "^w" "open_command ."
+alias o="open_command ."
 
 # Turn off abysmal command and argument spellchecking
 unsetopt correct_all
