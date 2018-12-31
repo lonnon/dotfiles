@@ -57,19 +57,11 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
-let hostname = substitute(system('hostname'), '\n', '', '')
-if hostname == 'Rover-LonnonFoster-2.local' || hostname == 'Rover-LonnonFoster.local' || hostname == 'Raphael'
-  " Use Solarized color schme (iTerm2, Windows console)
-  set t_Co=256
-  let g:solarized_termcolors=16
-  set background=dark
-  colorscheme solarized
-else
-  " Use Solarized8 color scheme (Terminus)
-  set termguicolors
-  set background=dark
-  colorscheme solarized8
-endif
+" Use Solarized color schme
+set t_Co=256
+let g:solarized_termcolors=16
+set background=dark
+colorscheme solarized
 
 " Highlight current line
 set cursorline
@@ -199,8 +191,19 @@ nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
 " Indent entire buffer
 nmap <leader>= :call Preserve("normal gg=G")<CR>
 
-" Copy range to clipboard (Mac pasteboard). Defaults to entire buffer.
-command! -range=% -nargs=0 Cy <line1>,<line2>w !pbcopy
+" Copy range to clipboard. Defaults to entire buffer.
+let g:uname = system("uname -a")
+if match(g:uname, 'Microsoft') > -1
+  let g:copy_command = "win32yank.exe -i"
+elseif match(g:uname, 'Darwin') > -1
+  let g:copy_command = "pbcopy"
+endif
+
+command! -range=% Cy <line1>,<line2>call CopyToClipboard()
+
+function! CopyToClipboard() range
+  execute (a:firstline) . "," . (a:lastline) . "w !" . g:copy_command
+endfunction
 
 " Paragraph and comment formatting options
 set formatoptions+=cjroq
