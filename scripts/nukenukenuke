@@ -1,4 +1,10 @@
 #!/bin/sh
+# Clear my stuff off a machine.
+
+if command -v security; then
+  security delete-generic-password -a "Hamaliel"
+  security delete-generic-password -a "Bourbonst"
+fi
 
 rm -rf "$HOME/*.txt"
 rm -rf "$HOME/.aws"
@@ -75,3 +81,5 @@ rm -rf "$HOME/.zshrc"
 
 # Last but not least
 rm -rf "$HOME/.zsh_history"
+rm -rf "$HOME/.bash_history"
+rm -rf "$HOME/.sh_history"
