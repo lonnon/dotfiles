@@ -1,14 +1,7 @@
 alias       h='history | tail -20'
-alias      ls='ls -hFCG'
-alias      la='ls -A'
-alias      ll='ls -l'
-alias     lla='ls -Al'
-alias      l.='ls -d .*'
 alias    grep='grep -n --color=auto'
 alias      to='~/.scripts/todo.sh'
 
-alias   purge='rm *~ .*~ *.*~ \#*'
-alias   rmtmp='rm **/*~'
 alias   start='cmd /C start'
 
 alias   rot13='tr a-zA-Z n-za-mN-ZA-M'
@@ -21,3 +14,14 @@ alias ipy="python -c 'from IPython import embed; embed()'"
 alias kick="dc stop web && dc up -d web && dc stop nginx && dc up -d nginx"
 alias ,ew="vim"
 alias ,a='ag'
+
+if [[ -f /mnt/c/Windows/System32/win32yank.exe ]]; then
+  alias pbcopy="win32yank -i"
+  alias pbpaste="win32yank -o"
+fi
+
+function take() {
+  mkdir -p $@ && cd ${@:$#}
+}
+
+bindkey "^[m" copy-prev-shell-word

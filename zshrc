@@ -22,6 +22,14 @@ elif [[ "$OSTYPE" == "linux-gnu" || "$OSTYPE" == "darwin"* ]]; then
   prompt pure
 fi
 
+# Load libraries. It bothers me that the for line is flagged as an error
+# by the linting in vim, but it's also an error in oh-my-zsh where I got
+# this. It works, and several alternate syntax attempts don't.
+ZSH_LIB="$HOME/.zsh/lib"
+for config_file ($ZSH_LIB/*.zsh); do
+  source $config_file
+done
+
 # Override ugly oh-my-zsh directory listings; I like the default colors.
 # EXCEPT for the background highlighting for directories writable by
 # others, which is not only hard to read in Solarized, but applies to
