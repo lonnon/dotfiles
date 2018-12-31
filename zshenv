@@ -2,7 +2,7 @@ export TERM="screen-256color"
 
 source ~/.zshenv-local
 source ~/.zshalias
-export PATH="$HOME/.scripts:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 export EDITOR="vim"
 export MORE="-s"
