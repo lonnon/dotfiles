@@ -5,22 +5,8 @@ bindkey -a 'q' replace-regex
 bindkey -v '^p' up-line-or-search
 bindkey -v '^n' down-line-or-search
 
-if [[ "$OSTYPE" == "whatever" ]]; then
-  # Path to your oh-my-zsh configuration.
-  ZSH="$HOME/.oh-my-zsh"
-  ZSH_CUSTOM="$HOME/.zsh/omz_custom"
-  ZSH_THEME="lonnon"
-
-  DISABLE_AUTO_UPDATE="false"
-  DISABLE_AUTO_TITLE="true"
-
-  plugins=(vi-mode open-window)
-
-  source "$ZSH/oh-my-zsh.sh"
-elif [[ "$OSTYPE" == "linux-gnu" || "$OSTYPE" == "darwin"* ]]; then
-  autoload -U promptinit; promptinit
-  prompt pure
-fi
+autoload -U promptinit; promptinit
+prompt pure
 
 # Load libraries. It bothers me that the for line is flagged as an error
 # by the linting in vim, but it's also an error in oh-my-zsh where I got
@@ -29,14 +15,6 @@ ZSH_LIB="$HOME/.zsh/lib"
 for config_file ($ZSH_LIB/*.zsh); do
   source $config_file
 done
-
-# Override ugly oh-my-zsh directory listings; I like the default colors.
-# EXCEPT for the background highlighting for directories writable by
-# others, which is not only hard to read in Solarized, but applies to
-# every goddamn directory on a Windows volume mounted under my Arch VM.
-# Totally useless as a security measure. See also http://geoff.greer.fm/lscolors/
-export LSCOLORS="exfxcxdxbxegedabagexex"
-export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=34:ow=34:"
 
 bindkey "^w" open-current-window
 alias o="open-window"
