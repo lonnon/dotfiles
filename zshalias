@@ -1,6 +1,7 @@
 alias       h='history | tail -20'
-alias    grep='grep -n --color=auto'
+alias    grep='grep -n --color=always'
 alias      to='~/.scripts/todo.sh'
+alias    less='less -R'
 
 alias   start='cmd /C start'
 
