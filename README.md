@@ -12,22 +12,10 @@ universal-ctags    `https://github.com/universal-ctags/ctags`
 zsh_aws_completer  `pip3 install awscli --upgrade --user`
 isort              `pip3 install isort`
 
-Machine identification for prompt:
-
-Rover:
-lonnonfoster@Rover-LonnonFoster-2.local
-
-Laptop:
-lonnon@Raphael
-
-Desktop:
-lonnon@Gabriel
-
 
 ### Mac OS X
 
 iTerm2
-Karabiner
 Moom
 NoSleep
 
