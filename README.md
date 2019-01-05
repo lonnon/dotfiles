@@ -10,7 +10,6 @@ oh-my-zsh          `https://github.com/robbyrussell/oh-my-zsh`
 thefuck            `https://github.com/nvbn/thefuck`
 universal-ctags    `https://github.com/universal-ctags/ctags`
 zsh_aws_completer  `pip3 install awscli --upgrade --user`
-isort              `pip3 install isort`
 
 
 ### Mac OS X
