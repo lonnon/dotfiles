@@ -233,6 +233,7 @@ nmap <leader>h :let @/ = ""<CR>:echo 'Highlight cleared'<CR>
 
 " Shortcut for inserting date stamp
 nmap <leader>d :r ! date +\%F<CR>
+nmap <leader>D :r ! date --iso-8601=seconds<CR>
 
 " Display and toggle YankRing
 let g:yankring_history_file = '.yankring_history'
