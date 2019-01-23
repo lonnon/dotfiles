@@ -1,3 +1,8 @@
 #!/bin/sh
 
-.git/hooks/ctags 2> $(git rev-parse --git-dir)/ctags.log &
+gitdir="$(git rev-parse --git-dir)"
+
+if [ $gitdir ]; then
+  ctags_cmd="$gitdir/hooks/ctags"
+  $ctags_cmd 2> $gitdir/ctags.log &
+fi

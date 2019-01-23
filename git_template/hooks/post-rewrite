@@ -1,5 +1,9 @@
 #!/bin/sh
 
-case "$1" in
-  rebase) exec .git/hooks/post-merge ;;
-esac
+gitdir="$(git rev-parse --git-dir)"
+
+if [ $gitdir ]; then
+  case "$1" in
+    rebase) exec $gitdir/hooks/post-merge ;;
+  esac
+fi
