@@ -1,15 +1,19 @@
-#!/bin/bash
+#!/bin/sh
+
+# Don't do anything unless asked to by environment variable.
+if [ -z $GIT_PREPEND_BRANCH ]; then
+  exit
+fi
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 msg=$(cat $1)
 
 if [ "$branch" == "HEAD" ]
 then
-    exit
+  exit
 fi
 
 if ! [[ "$msg" =~ ^\[$branch\] ]]
 then
-    echo -n "[$branch] $msg" > $1
+  echo -n "[$branch] $msg" > $1
 fi
-
