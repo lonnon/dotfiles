@@ -1,12 +1,21 @@
 #!/bin/sh
 
+# Exit immediately on a failed command so we can clean up.
 set -e
+
 PATH="/usr/local/bin:$PATH"
 dir=$(git rev-parse --git-dir)
+
+# Clean up temp file if we exit prematurely.
 trap 'rm -f "$dir/$$.tags"' EXIT
+
+# Make sure a .ctags exists, or the ctags invocation will fail.
 if ! [ -f $dir/.ctags ]; then
   touch "$dir/.ctags"
 fi
+
 ctags --recurse --options="$dir/.ctags" --exclude="$dir/../.gitignore" --tag-relative -f"$dir/$$.tags" "$dir/.."
 LC_ALL=C sed -i '' -E '/^(if|switch|function|module\.exports|it|describe).+language:js$/d' "$dir/$$.tags"
+
+# Move temp tags file to final location.
 mv "$dir/$$.tags" "$dir/tags"
