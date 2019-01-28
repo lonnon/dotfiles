@@ -50,3 +50,11 @@ $cp_cmd $dotdir/ssh/config $HOME/.ssh
 
 $cp_cmd $dotdir/gitconfig $HOME/.gitconfig
 sed -i "s|HOMEDIR|${HOME}|" $HOME/.gitconfig
+
+$cp_cmd $dotdir/zlogin $HOME/.zlogin
+
+# Grab all the submodules.
+pushd $dotdir
+git submodule init
+git submodule update
+popd
