@@ -45,6 +45,10 @@ nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
+" Use very magic searching to avoid backslash poisoning
+nnoremap / /\v
+vnoremap / /\v
+
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
