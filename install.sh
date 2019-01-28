@@ -37,7 +37,7 @@ do
   if [[ ${excludes[$filename]} ]]; then
     continue
   fi
-  ln -s "$HOME/.$filename" "$file"
+  ln -s "$file" "$HOME/.$filename"
 done
 
 # Copy special files that shouldn't be linked.
