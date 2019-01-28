@@ -1,6 +1,6 @@
 [user]
   name  = Lonnon Foster
-  email = email.goes@here.com
+  email = lonnon@lonnon.com
 [github]
   user  = lonnon
 [color]
@@ -11,7 +11,7 @@
   interactive = auto
 [core]
   pager = less -+S
-  excludesfile = /absolute/path/to/homedir/.gitignore
+  excludesfile = HOMEDIR/.gitignore
   editor = vim
 [alias]
   st = status

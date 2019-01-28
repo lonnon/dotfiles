@@ -1,0 +1,11 @@
+LICENSE
+README.md
+Rakefile
+bootstrap.sh
+excludes
+gitconfig
+install.sh
+packages-brew
+packages-ubuntu
+prompt_icons
+ssh
