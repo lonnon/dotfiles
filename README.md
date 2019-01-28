@@ -1,5 +1,3 @@
-Rakefile cribbed from [Ryan Bates](http://github.com/ryanb/dotfiles)
-
 Dependencies:
 
 par                `apt install par`
