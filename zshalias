@@ -1,5 +1,5 @@
 alias       h='history | tail -20'
-alias    grep='grep -n --color=always'
+alias    grep='grep --color=always'
 alias      to='~/.scripts/todo.sh'
 alias    less='less -R'
 
