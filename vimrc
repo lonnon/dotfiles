@@ -239,6 +239,9 @@ nmap <leader>h :let @/ = ""<CR>:echo 'Highlight cleared'<CR>
 nmap <leader>d :r ! date +\%F<CR>
 nmap <leader>D :r ! date --iso-8601=seconds<CR>
 
+" Journal entry separator and date stamp
+nmap <leader>j o<CR>---<CR><ESC>:r ! date --iso-8601=seconds<CR>o<CR>
+
 " Display and toggle YankRing
 let g:yankring_history_file = '.yankring_history'
 map <leader>y :YRShow<CR>
