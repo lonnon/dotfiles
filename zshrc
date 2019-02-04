@@ -8,9 +8,7 @@ bindkey -v '^n' down-line-or-search
 autoload -U promptinit; promptinit
 prompt pure
 
-# Load libraries. It bothers me that the for line is flagged as an error
-# by the linting in vim, but it's also an error in oh-my-zsh where I got
-# this. It works, and several alternate syntax attempts don't.
+# Load libraries
 ZSH_LIB="$HOME/.zsh/lib"
 for config_file ($ZSH_LIB/*.zsh); do
   source $config_file
@@ -40,3 +38,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval $(thefuck --alias)
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
