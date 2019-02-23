@@ -3,7 +3,7 @@ alias    grep='grep --color=always'
 alias      to='~/.scripts/todo.sh'
 alias    less='less -R'
 
-alias   start='cmd /C start'
+alias   start='cmd.exe /C start'
 
 alias   rot13='tr a-zA-Z n-za-mN-ZA-M'
 
