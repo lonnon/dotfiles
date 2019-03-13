@@ -25,7 +25,7 @@ alias d='dirs -v | head -10'
 alias purge='rm *~ .*~ *.*~ \#*'
 alias rmtmp='rm **/*~'
 
-alias ls='ls -hFG'
+alias ls='ls -hF'
 alias la='ls -A'
 alias ll='ls -l'
 alias lla='ls -Al'
