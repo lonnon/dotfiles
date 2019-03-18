@@ -52,7 +52,7 @@
 	url = https:://github.com/tpope/vim-dispatch.git
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
-	url = https:://github.com/w0rp/ale
+	url = https://github.com/w0rp/ale
 [submodule "vim/bundle/tasklist.vim"]
 	path = vim/bundle/tasklist.vim
 	url = https://github.com/vim-scripts/TaskList.vim
