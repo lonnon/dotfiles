@@ -49,10 +49,10 @@
 	url = https://github.com/tpope/vim-vinegar
 [submodule "vim/bundle/vim-dispatch"]
 	path = vim/bundle/vim-dispatch
-	url = git://github.com/tpope/vim-dispatch.git
+	url = https:://github.com/tpope/vim-dispatch.git
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
-	url = git://github.com/w0rp/ale
+	url = https:://github.com/w0rp/ale
 [submodule "vim/bundle/tasklist.vim"]
 	path = vim/bundle/tasklist.vim
 	url = https://github.com/vim-scripts/TaskList.vim
@@ -69,10 +69,10 @@
   ignore = dirty
 [submodule "vim/pack/themes/opt/solarized8"]
 	path = vim/pack/themes/opt/solarized8
-	url = git@github.com:lifepillar/vim-solarized8.git
+	url = https://github.com/lifepillar/vim-solarized8.git
 [submodule "zsh/pure"]
 	path = zsh/pure
-	url = git@github.com:sindresorhus/pure.git
+	url = https://github.com/sindresorhus/pure.git
 [submodule "zsh/puree"]
 	path = zsh/puree
-	url = git@github.com:/lonnon/puree.git
+	url = https://github.com/lonnon/puree.git
