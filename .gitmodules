@@ -49,7 +49,7 @@
 	url = https://github.com/tpope/vim-vinegar
 [submodule "vim/bundle/vim-dispatch"]
 	path = vim/bundle/vim-dispatch
-	url = https:://github.com/tpope/vim-dispatch.git
+	url = https://github.com/tpope/vim-dispatch.git
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
 	url = https://github.com/w0rp/ale
