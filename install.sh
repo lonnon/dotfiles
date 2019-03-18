@@ -58,3 +58,5 @@ pushd $dotdir
 git submodule init
 git submodule update
 popd
+
+mkdir $HOME/.vim/cache
