@@ -60,3 +60,4 @@ git submodule update
 popd
 
 mkdir $HOME/.vim/cache
+touch $HOME/.tmux.conf.local
