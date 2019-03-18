@@ -61,3 +61,5 @@ popd
 
 mkdir $HOME/.vim/cache
 touch $HOME/.tmux.conf.local
+touch $HOME/.zhenv-local
+touch $HOME/.zshalias-local
