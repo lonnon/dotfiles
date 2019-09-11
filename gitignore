@@ -12,3 +12,5 @@ Thumbs.db
 .docker-sync
 Session.vim
 __pycache__
+*.sess
+scratch.*
