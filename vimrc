@@ -90,13 +90,15 @@ if has("autocmd")
     autocmd FileType markdown  setlocal textwidth=78
 
     " Tab settings for various languages
-    autocmd FileType make       setlocal ts=4 sts=4 sw=4 noexpandtab
-    autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType lsl        setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType json       setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType html       setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType json       setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType lsl        setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType lua        setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType make       setlocal ts=4 sts=4 sw=4 noexpandtab
+    autocmd FileType php        setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType yaml       setlocal ts=2 sts=2 sw=2 expandtab
 
     " When editing a file, always jump to the last known cursor position.
     " Don't do it when the position is invalid or when inside an event handler
@@ -359,14 +361,13 @@ autocmd Syntax python setlocal define=^\s*\\(def\s\\|class\s\\)
 " Unite
 map <leader>f :Unite -no-split -buffer-name=files  -prompt= file_rec/async<CR>
 map <leader>F :Unite -no-split -buffer-name=files  -prompt= file<CR>
-map <leader>b :Unite -no-split -buffer-name=buffer -quick-match buffer<CR>
-map <leader>B :Unite -no-split -buffer-name=buffer -prompt= buffer<CR>
+map <leader>b :Unite -no-split -buffer-name=buffer -prompt= buffer<CR>
 map <leader>a :Unite -no-split -buffer-name=ack    -prompt= grep:.<CR>
 
 let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts =
-      \ '-i --vimgrep --hidden --ignore ' .
-      \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+      \ '-i --vimgrep --hidden --ignore ''.hg''' .
+      \ ' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
 let g:unite_source_grep_recursive_opt = ''
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
