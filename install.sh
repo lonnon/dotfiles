@@ -40,6 +40,10 @@ do
   ln -s "$file" "$HOME/.$filename"
 done
 
+# Rewrite .bashrc with something that launches zsh
+rm $HOMR/.bashrc
+cp $dotdir/bashrc $HOME/.bashrc
+
 # Copy special files that shouldn't be linked.
 cp_cmd='cp --no-clobber'
 
@@ -65,5 +69,7 @@ touch $HOME/.zhenv-local
 touch $HOME/.zshalias-local
 
 # Configure wsltty
-rm /mnt/c/Users/lonnon/AppData/Roaming/wsltty/config
-$cp_cmd $dotdir/wsltty/config /mnt/c/Users/lonnon/AppData/Roaming/wsltty
+if [[ $os == "wsl" ]]; then
+  rm /mnt/c/Users/lonnon/AppData/Roaming/wsltty/config
+  $cp_cmd $dotdir/wsltty/config /mnt/c/Users/lonnon/AppData/Roaming/wsltty
+fi
