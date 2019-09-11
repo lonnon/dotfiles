@@ -63,3 +63,7 @@ mkdir $HOME/.vim/cache
 touch $HOME/.tmux.conf.local
 touch $HOME/.zhenv-local
 touch $HOME/.zshalias-local
+
+# Configure wsltty
+rm /mnt/c/Users/lonnon/AppData/Roaming/wsltty/config
+$cp_cmd $dotdir/wsltty/config /mnt/c/Users/lonnon/AppData/Roaming/wsltty

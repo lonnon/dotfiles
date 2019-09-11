@@ -9,3 +9,4 @@ packages-brew
 packages-ubuntu
 prompt_icons
 ssh
+wsltty
