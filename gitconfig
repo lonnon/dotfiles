@@ -2,7 +2,9 @@
   name  = Lonnon Foster
   email = lonnon@lonnon.com
 [github]
-  user  = lonnon
+  user = lonnon
+[gitlab]
+  user = lonnon
 [color]
   ui = auto
   diff = auto
