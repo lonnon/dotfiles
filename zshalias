@@ -12,7 +12,6 @@ alias crontab='VIM_CRONTAB=true crontab'
 
 alias tmux="tmux -2"
 alias ipy="python -c 'from IPython import embed; embed()'"
-alias kick="dc stop web && dc up -d web && dc stop nginx && dc up -d nginx"
 alias ,ew="vim"
 alias ,a='ag'
 
