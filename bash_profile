@@ -2,7 +2,5 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 source ${HOME}/projects/web/profile
 export PATH=/Users/lonnonfoster/Library/Python/2.7/bin:$PATH
