@@ -41,7 +41,7 @@ do
 done
 
 # Rewrite .bashrc with something that launches zsh
-rm $HOMR/.bashrc
+rm $HOME/.bashrc
 cp $dotdir/bashrc $HOME/.bashrc
 
 # Copy special files that shouldn't be linked.
