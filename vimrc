@@ -244,6 +244,8 @@ nmap <leader>D :r ! date --iso-8601=seconds<CR>
 
 " Journal entry separator and date stamp
 nmap <leader>j o<CR>---<CR><ESC>:r ! date --iso-8601=seconds<CR>o<CR>
+" Same thing, but for scripted use open journal to new entry
+nmap <leader>J o<CR>---<CR><ESC>:r ! date --iso-8601=seconds<CR>o
 
 " Display and toggle YankRing
 let g:yankring_history_file = '.yankring_history'

@@ -14,7 +14,7 @@ alias tmux="tmux -2"
 alias ipy="python -c 'from IPython import embed; embed()'"
 alias ,ew="vim"
 alias ,a='ag'
-alias j="vim -c $ $HOME/text/journal.md"
+alias j="vim -s $HOME/.scripts/journal-append $HOME/text/journal.md"
 
 if [[ -f /mnt/c/Windows/System32/win32yank.exe ]]; then
   alias pbcopy="win32yank -i"
