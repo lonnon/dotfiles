@@ -6,7 +6,7 @@ dotdir=$HOME/dotfiles
 uname=$(uname -a)
 if [[ $uname =~ "Darwin" ]]; then
   os="mac"
-elif [[ $uname =~ "Microsoft" ]]; then
+elif [[ $uname =~ "[Mm]icrosoft" ]]; then
   os="wsl"
 else
   os="linux"

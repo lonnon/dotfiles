@@ -5,7 +5,7 @@ function open_command() {
   case "$OSTYPE" in
     darwin*)  open_cmd='open' ;;
     cygwin*)  open_cmd='cygstart' ;;
-    linux*)   ! [[ $(uname -a) =~ "Microsoft" ]] && open_cmd='xdg-open' || {
+    linux*)   ! [[ $(uname -a) =~ "[Mm]icrosoft" ]] && open_cmd='xdg-open' || {
                 open_cmd='cmd.exe /c start ""'
                 [[ -e "$1" ]] && { 1="$(wslpath -w "${1:a}")" || return 1 }
               } ;;

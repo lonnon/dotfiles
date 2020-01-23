@@ -200,7 +200,7 @@ nmap <leader>= :call Preserve("normal gg=G")<CR>
 
 " Copy range to clipboard. Defaults to entire buffer.
 let g:uname = system("uname -a")
-if match(g:uname, 'Microsoft') > -1
+if match(g:uname, '[Mm]icrosoft') > -1
   let g:copy_command = "win32yank.exe -i"
 elseif match(g:uname, 'Darwin') > -1
   let g:copy_command = "pbcopy"
