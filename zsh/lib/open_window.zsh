@@ -15,7 +15,7 @@ function open_command() {
               ;;
   esac
 
-  # don't use nohup on OSX or WSL
+  # don't use nohup on OSX or WSL 2
   if [[ nohup == 1 ]]; then
     nohup ${=open_cmd} "$@" &>/dev/null
   else
