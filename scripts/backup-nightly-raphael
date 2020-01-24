@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -Cavuzr --files-from=/home/lonnon/.backup-files /home/lonnon /mnt/c/Users/lonnon/OneDrive/wsl-backups/raphael && touch /home/lonnon/.backup-success
