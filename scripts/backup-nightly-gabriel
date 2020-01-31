@@ -1,3 +1,8 @@
 #!/bin/sh
 
-rsync -Cavuzr --files-from=/home/lonnon/.backup-files /home/lonnon /mnt/d/lonnon/OneDrive/wsl-backups/gabriel && touch /home/lonnon/.backup-success
+tar cJvf /home/lonnon/gabriel-appdata-daily.tar.xz \
+    --files-from=/home/lonnon/.gabriel-appdata-files \
+  && rsync -Cavuzr --files-from=/home/lonnon/.backup-files \
+  /home/lonnon /mnt/d/lonnon/OneDrive/wsl-backups/gabriel \
+  && rm /home/lonnon/gabriel-appdata-daily.tar.xz \
+  && touch /home/lonnon/.backup-success
