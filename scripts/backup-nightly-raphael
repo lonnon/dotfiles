@@ -1,3 +1,8 @@
 #!/bin/sh
 
-rsync -Cavuzr --files-from=/home/lonnon/.backup-files /home/lonnon /mnt/c/Users/lonnon/OneDrive/wsl-backups/raphael && touch /home/lonnon/.backup-success
+rsync -Cavuzr --files-from=/home/lonnon/.backup-files \
+    --exclude-from=/home/lonnon/.backup-exclude \
+    /home/lonnon /mnt/c/Users/lonnon/OneDrive/wsl-backups/raphael \
+  && rsync -Cavuzr --files-from=/home/lonnon/.backup-files-appdata \
+    /mnt/c/Users/lonnon/AppData /mnt/c/Users/lonnon/OneDrive/wsl-backups/raphael/appdata \
+  && touch /home/lonnon/.backup-success
