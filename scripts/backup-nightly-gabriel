@@ -1,8 +1,8 @@
 #!/bin/sh
 
-tar cJvf /home/lonnon/gabriel-appdata-daily.tar.xz \
-    --files-from=/home/lonnon/.gabriel-appdata-files \
-  && rsync -Cavuzr --files-from=/home/lonnon/.backup-files \
-  /home/lonnon /mnt/d/lonnon/OneDrive/wsl-backups/gabriel \
-  && rm /home/lonnon/gabriel-appdata-daily.tar.xz \
+rsync -Cavuzr --files-from=/home/lonnon/.backup-files \
+    --exclude-from=/home/lonnon/.backup-exclude \
+    /home/lonnon /mnt/d/lonnon/OneDrive/wsl-backups/gabriel \
+  && rsync -Cavuzr --files-from=/home/lonnon/.backup-files-appdata \
+    /mnt/c/Users/lonnon/AppData /mnt/d/lonnon/OneDrive/wsl-backups/gabriel/appdata \
   && touch /home/lonnon/.backup-success
