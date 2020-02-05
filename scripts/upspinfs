@@ -1,0 +1,92 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:          upspinfs
+# Required-Start:    $network $remote_fs $syslog
+# Required-Stop:     $network $remote_fs $syslog
+# Default-Start:     3 5
+# Default-Stop:      0 1 2 4 6
+# Short-Description: upspin filesystem mount via FUSE
+# Description:       upspin is a secure, federated file sharing system.
+#                    upspinfs mounts upspin stores to the local filesystem.
+#                    This provides upspinfs daemon functionality.
+### END INIT INFO
+
+set -e
+
+# /etc/init.d/upspinfs: start and stop the upspinfs daemon
+
+DAEMON=/usr/local/bin/upspinfs
+MOUNT_DIR=/home/lonnon/up
+UPSPIN_PID_FILE=/home/lonnon/upspin/upspinfs.pid
+
+test -x $DAEMON || exit 0
+
+. /lib/lsb/init-functions
+
+upspinfs_start() {
+  if start-stop-daemon --start --quiet --background \
+    --pidfile $UPSPIN_PID_FILE --make-pidfile \
+    --chuid lonnon --chdir /home/lonnon --startas $DAEMON \
+    $MOUNT_DIR
+  then
+    rc=0
+    sleep 1
+    if ! kill -0 $(cat $UPSPIN_PID_FILE) >/dev/null 2>&1; then
+      log_failure_msg "upspinfs daemon failed to start"
+      rc=1
+    fi
+  else
+    rc=1
+  fi
+  if [ $rc -eq 0 ]; then
+    log_end_msg 0
+  else
+    log_end_msg 1
+    rm -f $UPSPIN_PID_FILE
+  fi
+} # upspinfs_start
+
+
+case "$1" in
+  start)
+    log_daemon_msg "Starting upspinfs daemon" "upspinfs"
+    if [ -s $UPSPIN_PID_FILE ] && kill -0 $(cat $UPSPIN_PID_FILE) >/dev/null 2>&1; then
+      log_progress_msg "apparently already running"
+      log_end_msg 0
+      exit 0
+    fi
+    upspinfs_start
+  ;;
+
+  stop)
+    log_daemon_msg "Stopping upspinfs daemon" "upspinfs"
+    start-stop-daemon --stop --quiet --oknodo --pidfile $UPSPIN_PID_FILE
+    log_end_msg $?
+    rm -f $UPSPIN_PID_FILE
+  ;;
+
+  reload|force-reload|restart)
+    set +e
+    log_daemon_msg "Restarting upspinfs daemon" "upspinfs"
+    if [ -s $UPSPIN_PID_FILE ] && kill -0 $(cat $UPSPIN_PID_FILE) >/dev/null 2>&1; then
+      start-stop-daemon --stop --quiet --oknodo --pidfile $UPSPIN_PID_FILE || true
+      sleep 1
+    else
+      log_warning_msg "upspinfs daemon not running, attempting to start."
+      rm -f $UPSPIN_PID_FILE
+    fi
+    upspinfs_start
+  ;;
+
+  status)
+    status_of_proc -p $UPSPIN_PID_FILE "$DAEMON" upspinfs
+    exit $?	# notreached due to set -e
+  ;;
+
+  *)
+    echo "Usage: /etc/init.d/upspinfs {start|stop|reload|force-reload|restart|status}"
+    exit 1
+esac
+
+exit 0

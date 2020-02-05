@@ -1,0 +1,4 @@
+#!/bin/sh
+
+service cron start
+service upspinfs start
