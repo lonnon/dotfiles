@@ -3,7 +3,7 @@ export DISPLAY=:0.0
 
 source ~/.zshenv-local
 source ~/.zshalias
-export PATH="$HOME/.scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:$HOME/.yarn/bin"
+# export PATH="$HOME/.scripts:$HOME/.local/bin:$HOME/.cargo/bin:$PATH:$HOME/.yarn/bin"
 
 export EDITOR="vim"
 export MORE="-s"
