@@ -15,6 +15,7 @@ alias ipy="python -c 'from IPython import embed; embed()'"
 alias ,ew="vim"
 alias ,a='ag'
 alias j="vim -s $HOME/.scripts/journal-append $HOME/text/journal.md"
+alias itemfilter="vim /mnt/d/lonnon/OneDrive/Documents/My\ Games/Path\ of\ Exile/Chandra.filter"
 
 if [[ -f /mnt/c/Windows/System32/win32yank.exe ]]; then
   alias pbcopy="win32yank -i"
