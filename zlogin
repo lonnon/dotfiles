@@ -1,5 +1,5 @@
 echo "Welcome to"
-figlet -fslant ' ----*raphael'
+figlet -fslant " ----*`hostname`"
 echo
 uptime
 echo
