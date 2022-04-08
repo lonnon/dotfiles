@@ -19,3 +19,4 @@ vim/.netrwhist
 vim/cache
 scripts/passphrase
 config/wslu
+config/configstore
