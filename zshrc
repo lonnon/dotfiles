@@ -16,7 +16,7 @@ done
 
 # TODO: make this a widget again
 # bindkey "^w" "open_command ."
-alias o="open_command ."
+alias o="open_command $@"
 
 # Turn off abysmal command and argument spellchecking
 unsetopt correct_all
