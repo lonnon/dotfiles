@@ -212,6 +212,17 @@ function! CopyToClipboard() range
   execute (a:firstline) . "," . (a:lastline) . "w !" . g:copy_command
 endfunction
 
+command! -range=% Cm <line1>,<line2>call PreviewMarkdown()
+
+let g:md_preview_path = "/home/lonnon/projects/github-markdown-formatter/"
+let g:md_previewer = "github_markdown_formatter.py"
+let g:md_output = "/tmp/md_preview.html"
+let g:md_style = g:md_preview_path . "styles/azure"
+function! PreviewMarkdown() range
+  silent execute (a:firstline) . "," . (a:lastline) . "w !python " . g:md_preview_path . g:md_previewer . " -o " . g:md_output . " -s " . g:md_style
+  silent execute "!xdg-open " . g:md_output
+endfunction
+
 " Paragraph and comment formatting options
 set formatoptions+=cjroq
 
